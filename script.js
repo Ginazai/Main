@@ -1,13 +1,18 @@
 $(document).ready(function() {
-	function selected(item) {
-		$(item).click(function() {
-		$(item).removeClass('active');
+
+	var blur_count = 0;
+
+	$('.list-group-item')click(function() {
+		$('.list-group-item').removeClass('active');
 		$(this).toggleClass('active');
-		$(this).blur(function() {
-			// $(this).removeClass('active');
-			setTimeout(function() {console.log('blur');$(item).removeClass('active');}, 10000);
-		});
+		blur_count = 0;
 	});
-	}	
-	selected('.list-group-item');
+
+	$('.list-group-item').blur(function() {
+		if (blur_count > 0) {
+			$(this).removeClass('active');
+		}
+	blur_count +=1;
+	});
+
 });

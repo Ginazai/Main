@@ -1,6 +1,15 @@
 html, body {
   height: 100%;
   box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #006eb6;
 }
 
 body {
@@ -13,7 +22,7 @@ body {
   background-size: 100%;
 }
 
-.list-group {
+.card {
   text-align: center;
   width: 100%;
   max-width: 350px;
